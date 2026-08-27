@@ -62,3 +62,38 @@
     });
   });
 })();
+
+
+// -- Copy Prompt Button (skrip-gratis.html) ----------------
+(function initCopyPrompt() {
+  const btn = document.getElementById('copyPromptBtn');
+  const promptEl = document.getElementById('promptText');
+  if (!btn || !promptEl) return;
+
+  btn.addEventListener('click', async () => {
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(promptEl.textContent);
+      } else {
+        const range = document.createRange();
+        range.selectNodeContents(promptEl);
+        const sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        const success = document.execCommand('copy');
+        sel.removeAllRanges();
+        if (!success) throw new Error('execCommand failed');
+      }
+      const original = btn.textContent;
+      btn.textContent = 'Tersalin!';
+      btn.classList.add('is-copied');
+      setTimeout(() => {
+        btn.textContent = original;
+        btn.classList.remove('is-copied');
+      }, 2000);
+    } catch (err) {
+      btn.textContent = 'Gagal - pilih teks lalu Ctrl+C';
+      setTimeout(() => { btn.textContent = 'Salin Prompt'; }, 3000);
+    }
+  });
+})();

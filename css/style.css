@@ -748,3 +748,219 @@ html, body {
   overflow-x: hidden;
   max-width: 100vw;
 }
+
+
+/* ============================================================
+   FITUR: Prompt Skrip Gratis — additions
+   ============================================================ */
+
+/* ── Secondary button (outline gold, secondary hierarchy) ── */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 150ms ease, color 150ms ease, transform 150ms ease;
+  padding: 14px 24px;
+  border: 2px solid var(--gold);
+  background: transparent;
+  color: var(--gold);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 215, 0, 0.08);
+}
+
+.btn-secondary:active {
+  transform: scale(0.98);
+}
+
+.btn-secondary:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* ── Free Tool section ───────────────────────────────────── */
+.section-free-tool {
+  background: #0e0e10;
+  border-top: 1px solid rgba(255, 215, 0, 0.15);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+}
+
+/* ── Page header (skrip-gratis.html) ─────────────────────── */
+.page-header {
+  background: var(--ivory);
+  padding: var(--sp-3) 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.page-header a {
+  display: inline-block;
+}
+
+/* ── Prompt Block ─────────────────────────────────────────── */
+.prompt-block-wrapper {
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #0d0d0f;
+  margin-block: var(--sp-4);
+}
+
+.prompt-block-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  padding: var(--sp-2) var(--sp-3);
+  background: rgba(255, 215, 0, 0.06);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+  flex-wrap: wrap;
+}
+
+.prompt-block-header span {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--smoke);
+  letter-spacing: 0.05em;
+}
+
+.btn-copy {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--gold);
+  color: var(--ink);
+  border: none;
+  border-radius: 5px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: background-color 150ms ease, transform 150ms ease;
+  white-space: nowrap;
+  min-height: 36px;
+}
+
+.btn-copy:hover {
+  background: var(--gold-deep);
+}
+
+.btn-copy:active {
+  transform: scale(0.97);
+}
+
+.btn-copy.is-copied {
+  background: #3ecf8e;
+  color: #fff;
+}
+
+.btn-copy:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.prompt-block {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--ivory);
+  padding: var(--sp-4);
+  margin: 0;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 480px;
+  overflow-y: auto;
+  scrollbar-color: rgba(255,215,0,0.3) transparent;
+  scrollbar-width: thin;
+}
+
+/* ── Cross-sell section (skrip-gratis.html footer CTA) ───── */
+.section-crosssell {
+  background: var(--void);
+  text-align: center;
+}
+
+.crosssell-trust {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--smoke);
+  border-top: 1px solid rgba(255, 215, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+  padding: var(--sp-2) 0;
+  margin-block: var(--sp-4);
+}
+
+.crosssell-trust .sep { color: var(--gold); opacity: 0.5; }
+
+.crosssell-ctas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.crosssell-link {
+  font-size: 14px;
+  color: var(--smoke);
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+.crosssell-link:hover { color: var(--gold); }
+.crosssell-link:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ── Example accordion label on skrip-gratis ─────────────── */
+.example-label {
+  font-size: 13px;
+  color: var(--smoke);
+  font-style: italic;
+  margin-top: var(--sp-1);
+}
+
+
+/* ── Hero compact variant (skrip-gratis.html) ─────────────── */
+.hero-compact {
+  min-height: unset;
+  padding-block: var(--sp-5);
+}
+
+/* ── Free note (small disclaimer on skrip-gratis hero) ────── */
+.free-note {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--smoke);
+  margin-top: var(--sp-3);
+}
+
+.free-note svg { flex-shrink: 0; }
+
+/* ── Inline text link (claude.ai link in steps) ────────────── */
+.inline-link {
+  color: var(--gold);
+  text-decoration: underline;
+  text-decoration-color: rgba(255,215,0,0.4);
+  text-underline-offset: 2px;
+  transition: text-decoration-color 150ms ease;
+}
+
+.inline-link:hover { text-decoration-color: var(--gold); }
+.inline-link:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
