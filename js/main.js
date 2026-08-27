@@ -1,4 +1,4 @@
-﻿/**
+/**
  * hai.filiate — main.js
  * Scroll reveal + FAQ accordion chevron (using native <details>)
  * No dependencies. Total < 15KB.
